@@ -1,0 +1,11 @@
+$TTL 604800
+@ IN SOA maestro.empresa.local. root.empresa.local. (
+     1 604800 86400 2419200 604800 )
+@       IN NS maestro.empresa.local.
+@       IN NS esclavo.empresa.local.
+
+maestro IN A 192.168.50.10
+esclavo IN A 192.168.50.11
+cliente IN A 192.168.50.12
+
+www     IN CNAME cliente.empresa.local.

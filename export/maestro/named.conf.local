@@ -1,0 +1,26 @@
+// Zona directa empresa.local
+zone "empresa.local" {
+    type master;
+    file "/etc/bind/db.empresa.local";
+    allow-transfer { 192.168.50.11; };
+};
+
+// Zona inversa empresa.local
+zone "50.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.192.168.50";
+    allow-transfer { 192.168.50.11; };
+};
+
+// Zonas extra (para Parte 2)
+zone "santiago.com" {
+    type master;
+    file "/etc/bind/db.santiago.com";
+    allow-transfer { 192.168.50.11; };
+};
+zone "collantes.com" {
+    type master;
+    file "/etc/bind/db.collantes.com";
+    allow-transfer { 192.168.50.11; };
+};
+
